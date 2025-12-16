@@ -1,0 +1,7 @@
+<div class="modal">
+  <h3>Add Task</h3>
+  <input [(ngModel)]="task.title" placeholder="Task title" />
+  <br /><br />
+  <button (click)="submit.emit(task)">Save</button>
+  <button (click)="close.emit()">Cancel</button>
+</div>

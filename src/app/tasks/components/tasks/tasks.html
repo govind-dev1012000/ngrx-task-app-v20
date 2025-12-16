@@ -1,0 +1,12 @@
+<h2>Tasks</h2>
+
+<button (click)="open()">Add Task</button>
+
+@for (task of tasks$ | async; track task.id) {
+<p>
+  {{ task.title }}
+  <button (click)="remove(task.id!)">Delete</button>
+</p>
+} @if (showModal) {
+<app-task-modal (submit)="add($event)" (close)="close()" />
+}
